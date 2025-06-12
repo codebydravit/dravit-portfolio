@@ -1,10 +1,10 @@
-<!-- projects.html -->
+<!-- articles.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects | Dravit</title>
+  <title>Articles | Dravit</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="flex flex-col min-h-screen bg-white text-gray-800">
@@ -14,34 +14,34 @@
       <div class="font-bold text-lg">Dravit</div>
       <ul class="flex space-x-4 text-sm">
         <li><a href="index.html" class="hover:text-indigo-600">Home</a></li>
-        <li><a href="about\index.html" class="hover:text-indigo-600 font-semibold">About</a></li>
+        <li><a href="about\index.html" class="hover:text-indigo-600">About</a></li>
         <li><a href="projects\index.html" class="hover:text-indigo-600">Projects</a></li>
-        <li><a href="articles\index.html" class="hover:text-indigo-600">Articles</a></li>
+        <li><a href="articles\index.html" class="hover:text-indigo-600 font-semibold">Articles</a></li>
         <li><a href="contact\index.html" class="hover:text-indigo-600">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Main Content -->
-  <main class="flex-grow pt-20 px-4 max-w-5xl mx-auto">
-    <h1 class="text-3xl font-bold mb-6">Projects</h1>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="p-5 border border-gray-200 rounded-lg shadow-sm">
-        <h2 class="text-xl font-semibold mb-2">Hello Kisan</h2>
-        <p class="text-gray-600 mb-2">An AI-powered chatbot platform for farmers providing weather, market prices, and soil insights.</p>
-        <a href="https://hello-kisan.com/" class="text-indigo-600 hover:underline">Visit Site</a>
-      </div>
-      <div class="p-5 border border-gray-200 rounded-lg shadow-sm">
-        <h2 class="text-xl font-semibold mb-2">IPPO Sales AI Chatbot</h2>
-        <p class="text-gray-600 mb-2">Automated lead generation and bulk WhatsApp messaging platform using Meta APIs.</p>
-        <a href="#" class="text-indigo-600 hover:underline">More Info</a>
-      </div>
-      <div class="p-5 border border-gray-200 rounded-lg shadow-sm">
-        <h2 class="text-xl font-semibold mb-2">RAG-based Chatbot</h2>
-        <p class="text-gray-600 mb-2">Built with OpenAI + Pinecone + Langchain to fetch domain-specific insights from custom datasets.</p>
-        <a href="#" class="text-indigo-600 hover:underline">Demo Coming Soon</a>
-      </div>
-    </div>
+  <main class="flex-grow pt-20 px-4 max-w-3xl mx-auto">
+    <h1 class="text-3xl font-bold mb-6">Articles & Blog Posts</h1>
+    <ul class="space-y-6">
+      <li class="border-b pb-4">
+        <h2 class="text-xl font-semibold">How I Built a WhatsApp AI Bot with Meta & Node.js</h2>
+        <p class="text-gray-600">A breakdown of building a bulk message engine with API integration, scheduling, and error handling.</p>
+        <a href="#" class="text-indigo-600 hover:underline text-sm">Read More</a>
+      </li>
+      <li class="border-b pb-4">
+        <h2 class="text-xl font-semibold">Using Pinecone + OpenAI to Create a RAG Chatbot</h2>
+        <p class="text-gray-600">Explore how I implemented retrieval-augmented generation using Langchain and vector databases.</p>
+        <a href="#" class="text-indigo-600 hover:underline text-sm">Read More</a>
+      </li>
+      <li class="border-b pb-4">
+        <h2 class="text-xl font-semibold">Deploying ML Models to Production (the Fast Way)</h2>
+        <p class="text-gray-600">Tips and lessons from deploying scalable ML pipelines with Docker, FastAPI, and CI/CD.</p>
+        <a href="#" class="text-indigo-600 hover:underline text-sm">Read More</a>
+      </li>
+    </ul>
   </main>
 
   <!-- Footer -->

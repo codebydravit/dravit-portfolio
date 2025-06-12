@@ -1,0 +1,64 @@
+<!-- projects.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Dravit</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="flex flex-col min-h-screen bg-white text-gray-800">
+  <!-- Header -->
+  <header id="navbar" class="fixed top-0 w-full bg-white shadow-md transition-transform z-50">
+    <nav class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="font-bold text-lg">Dravit</div>
+      <ul class="flex space-x-4 text-sm">
+        <li><a href="index.html" class="hover:text-indigo-600">Home</a></li>
+        <li><a href="about.html" class="hover:text-indigo-600">About</a></li>
+        <li><a href="projects.html" class="hover:text-indigo-600 font-semibold">Projects</a></li>
+        <li><a href="articles.html" class="hover:text-indigo-600">Articles</a></li>
+        <li><a href="contact.html" class="hover:text-indigo-600">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow pt-20 px-4 max-w-5xl mx-auto">
+    <h1 class="text-3xl font-bold mb-6">Projects</h1>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="p-5 border border-gray-200 rounded-lg shadow-sm">
+        <h2 class="text-xl font-semibold mb-2">Hello Kisan</h2>
+        <p class="text-gray-600 mb-2">An AI-powered chatbot platform for farmers providing weather, market prices, and soil insights.</p>
+        <a href="https://hello-kisan.com/" class="text-indigo-600 hover:underline">Visit Site</a>
+      </div>
+      <div class="p-5 border border-gray-200 rounded-lg shadow-sm">
+        <h2 class="text-xl font-semibold mb-2">IPPO Sales AI Chatbot</h2>
+        <p class="text-gray-600 mb-2">Automated lead generation and bulk WhatsApp messaging platform using Meta APIs.</p>
+        <a href="#" class="text-indigo-600 hover:underline">More Info</a>
+      </div>
+      <div class="p-5 border border-gray-200 rounded-lg shadow-sm">
+        <h2 class="text-xl font-semibold mb-2">RAG-based Chatbot</h2>
+        <p class="text-gray-600 mb-2">Built with OpenAI + Pinecone + Langchain to fetch domain-specific insights from custom datasets.</p>
+        <a href="#" class="text-indigo-600 hover:underline">Demo Coming Soon</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 py-6 text-center text-gray-500 text-sm">
+    &copy; 2025 Dravit · <a href="https://www.dravit.in" class="hover:text-indigo-600">www.dravit.in</a>
+  </footer>
+
+  <!-- Scroll Behavior Script -->
+  <script>
+    let lastScrollTop = 0;
+    const navbar = document.getElementById("navbar");
+
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      navbar.style.transform = currentScroll > lastScrollTop ? "translateY(-100%)" : "translateY(0)";
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    });
+  </script>
+</body>
+</html>

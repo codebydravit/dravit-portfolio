@@ -1,0 +1,62 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Dravit</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="flex flex-col min-h-screen bg-white text-gray-800">
+  <!-- Header -->
+  <header id="navbar" class="fixed top-0 w-full bg-white shadow-md transition-transform z-50">
+    <nav class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="font-bold text-lg">Dravit</div>
+      <ul class="flex space-x-4 text-sm">
+        <li><a href="index.html" class="hover:text-indigo-600">Home</a></li>
+        <li><a href="about.html" class="hover:text-indigo-600">About</a></li>
+        <li><a href="projects.html" class="hover:text-indigo-600">Projects</a></li>
+        <li><a href="articles.html" class="hover:text-indigo-600">Articles</a></li>
+        <li><a href="contact.html" class="hover:text-indigo-600 font-semibold">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow pt-20 px-4 max-w-xl mx-auto">
+    <h1 class="text-3xl font-bold mb-6">Contact Me</h1>
+    <p class="mb-4 text-gray-600">Feel free to reach out for collaborations, freelance work, or just to say hi 👋</p>
+    <div class="space-y-4">
+      <p><strong>Email:</strong> <a href="mailto:hello@dravit.in" class="text-indigo-600 hover:underline">hello@dravit.in</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+919876543210" class="text-indigo-600 hover:underline">+91 98765 43210</a></p>
+      <p><strong>Website:</strong> <a href="https://www.dravit.in" class="text-indigo-600 hover:underline">www.dravit.in</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/dravit" class="text-indigo-600 hover:underline">linkedin.com/in/dravit</a></p>
+    </div>
+    <!-- Optional contact form placeholder -->
+    <form class="mt-8 space-y-4">
+      <input type="text" placeholder="Your Name" class="w-full border rounded p-2">
+      <input type="email" placeholder="Your Email" class="w-full border rounded p-2">
+      <textarea placeholder="Your Message" class="w-full border rounded p-2" rows="4"></textarea>
+      <button type="submit" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">Send</button>
+    </form>
+    
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 py-6 text-center text-gray-500 text-sm">
+    &copy; 2025 Dravit · <a href="https://www.dravit.in" class="hover:text-indigo-600">www.dravit.in</a>
+  </footer>
+
+  <!-- Scroll Behavior Script -->
+  <script>
+    let lastScrollTop = 0;
+    const navbar = document.getElementById("navbar");
+
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      navbar.style.transform = currentScroll > lastScrollTop ? "translateY(-100%)" : "translateY(0)";
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    });
+  </script>
+</body>
+</html>

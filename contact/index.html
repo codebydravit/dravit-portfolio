@@ -33,18 +33,50 @@
       <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/dravit" class="text-indigo-600 hover:underline">linkedin.com/in/dravit</a></p>
     </div>
     <!-- Optional contact form placeholder -->
-    <form class="mt-8 space-y-4">
-      <input type="text" placeholder="Your Name" class="w-full border rounded p-2">
-      <input type="email" placeholder="Your Email" class="w-full border rounded p-2">
-      <textarea placeholder="Your Message" class="w-full border rounded p-2" rows="4"></textarea>
+    <form id="contactForm" class="mt-8 space-y-4">
+      <input type="text" id="name" placeholder="Your Name" class="w-full border rounded p-2" required>
+      <input type="email" id="email" placeholder="Your Email" class="w-full border rounded p-2" required>
+      <textarea id="message" placeholder="Your Message" class="w-full border rounded p-2" rows="4" required></textarea>
       <button type="submit" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">Send</button>
     </form>
+
+    <script>
+      document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Stop form from submitting normally
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        const subject = encodeURIComponent(`Message from ${name}`);
+        const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+        const to = "hello@dravit.in";
+
+        let mailURL = `mailto:${to}?subject=${subject}&body=${body}`;
+
+        if (email.includes("@gmail.com")) {
+          mailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${subject}&body=${body}`;
+        } else if (
+          email.includes("@outlook.com") ||
+          email.includes("@hotmail.com") ||
+          email.includes("@live.com")
+        ) {
+          mailURL = `https://outlook.live.com/owa/?path=/mail/action/compose&to=${to}&subject=${subject}&body=${body}`;
+        }
+
+        window.open(mailURL, "_blank");
+      });
+    </script>
+
+    
+    
     
   </main>
 
   <!-- Footer -->
   <footer class="bg-gray-100 py-6 text-center text-gray-500 text-sm">
-    &copy; 2025 <a href="https://codebydravit.github.io/dravit-portfolio/" class="hover:text-indigo-600">Dravit</a>
+    <a href="https://codebydravit.github.io/dravit-portfolio/" class="hover:text-indigo-600">Dravit</a>
+    &copy; 2025 
   </footer>
 
   <!-- Scroll Behavior Script -->

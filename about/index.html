@@ -1,20 +1,21 @@
-<!-- about.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | Dravit</title>
+  <link rel="icon" href="/dravit-portfolio/assets/favicon.svg" type="image/svg+xml">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="flex flex-col min-h-screen bg-white text-gray-800">
+
   <!-- Header -->
   <header id="navbar" class="fixed top-0 w-full bg-white shadow-md transition-transform z-50">
     <nav class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
       <div class="font-bold text-lg">Dravit</div>
       <ul class="flex space-x-4 text-sm">
         <li><a href="/dravit-portfolio/" class="hover:text-indigo-600">Home</a></li>
-        <li><a href="/dravit-portfolio/about/" class="hover:text-indigo-600">About</a></li>
+        <li><a href="/dravit-portfolio/about/" class="text-indigo-600 font-semibold">About</a></li>
         <li><a href="/dravit-portfolio/projects/" class="hover:text-indigo-600">Projects</a></li>
         <li><a href="/dravit-portfolio/articles/" class="hover:text-indigo-600">Articles</a></li>
         <li><a href="/dravit-portfolio/contact/" class="hover:text-indigo-600">Contact</a></li>
@@ -23,21 +24,96 @@
   </header>
 
   <!-- Main Content -->
-  <main class="flex-grow pt-20 px-4 max-w-4xl mx-auto">
-    <h1 class="text-3xl font-bold mb-4">About Me</h1>
-    <p class="text-gray-700 text-lg leading-relaxed">
-      I'm Dravit, an AI Developer and Machine Learning Engineer with over 2 years of experience in designing intelligent systems.
-      I specialize in creating robust ML pipelines, fine-tuning LLMs, and building production-ready AI applications. My interests span across
-      natural language processing, generative models, and deploying AI at scale. I am passionate about solving real-world problems through AI.
-    </p>
+  <main class="flex-grow pt-28 px-4 max-w-3xl mx-auto text-center">
+      <!-- Introduction -->
+    <section class="p-6 sm:p-8">
+      
+      <h1 class="text-3xl font-bold mt-4">About me</h1>
+      <p class="mt-3 text-base text-gray-700 leading-relaxed">
+        I'm an <strong>AI Developer</strong> and <strong>Machine Learning Engineer</strong> with over 2 years of experience building smart systems that solve real-world problems.
+        My passion lies in crafting scalable ML pipelines, integrating generative AI, and deploying AI models into real products that people actually use.
+      </p>
+      <p class="mt-4 text-base text-gray-700 leading-relaxed">
+        From <span class="font-medium text-indigo-600">NLP models and custom chatbots</span> to <span class="font-medium text-indigo-600">voice interfaces and recommendation engines</span>,
+        I enjoy exploring the full AI stack—from research to deployment.
+      </p>
+      <p class="mt-4 text-sm text-gray-600 italic">
+        I'm currently focused on lightweight language models, Whisper/WhisperX pipelines, and RAG (retrieval-augmented generation) systems.
+      </p>
+
+      <div class="mt-6">
+        <a href="/dravit-portfolio/projects/" class="inline-block bg-indigo-600 text-white px-6 py-2 rounded-full text-sm hover:bg-indigo-700 transition">
+          View My Projects
+        </a>
+      </div>
+    </section>
+
+    <section class="mt-12 px-4 text-left">
+      <h2 class="text-xl font-semibold text-indigo-700 mb-2">What drives me?</h2>
+      <ul class="list-disc pl-5 text-gray-700 space-y-2">
+        <li>Solving practical problems with elegant AI-driven solutions</li>
+        <li>Helping businesses adopt AI with usable tools, not just hype</li>
+        <li>Learning continuously — I’m always experimenting with new frameworks</li>
+        <li>Mentoring and writing — I enjoy sharing what I know</li>
+        <li>Turning complex problems into elegant AI-powered solutions</li>
+        <li>Building with intention — clean, maintainable, and scalable code</li>
+        <li>Staying hands-on with the latest in AI, devtools, and cloud</li>
+        <li>Sharing what I learn and helping others grow in tech</li>
+      </ul>
+    </section>
+    <!-- Skills -->
+    <section class="mt-10 px-4">
+      <h2 class="text-xl font-semibold text-indigo-700 mb-4">Technical Skills</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-sm text-gray-800">
+        <div>
+          <h3 class="font-semibold mb-2 text-gray-600">Frontend</h3>
+          <ul class="space-y-1">
+            <li>ReactJs</li>
+            <li>NextJs</li>
+            <li>Svelte</li>
+            <li>Astro</li>
+            <li>React Query</li>
+            <li>SWR</li>
+            <li>Zustand</li>
+            <li>Redux</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-2 text-gray-600">Backend</h3>
+          <ul class="space-y-1">
+            <li>Node.js</li>
+            <li>Express.js</li>
+            <li>Fastify</li>
+            <li>REST & GraphQL APIs</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-2 text-gray-600">DevOps</h3>
+          <ul class="space-y-1">
+            <li>Docker</li>
+            <li>Git & GitHub</li>
+            <li>CI/CD (GitHub Actions)</li>
+            <li>Netlify / Vercel / Firebase</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-2 text-gray-600">Data Science & AI/ML</h3>
+          <ul class="space-y-1">
+            <li>Python, NumPy, Pandas</li>
+            <li>Scikit-learn, XGBoost</li>
+            <li>OpenAI, Hugging Face</li>
+            <li>LangChain, Pinecone</li>
+            <li>RAG pipelines</li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
   <footer class="bg-gray-100 py-6 text-center text-gray-500 text-sm">
-    <a href="https://codebydravit.github.io/dravit-portfolio/" class="hover:text-indigo-600">Dravit</a>
-    &copy; 2025 
+    <a href="https://codebydravit.github.io/dravit-portfolio/" class="hover:text-indigo-600 font-semibold">Dravit</a> &copy; 2025
   </footer>
-
 
   <!-- Scroll Behavior Script -->
   <script>

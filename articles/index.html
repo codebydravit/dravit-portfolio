@@ -9,21 +9,22 @@
 </head>
 <body class="flex flex-col min-h-screen bg-white text-gray-800">
   <!-- Header -->
-  <header id="navbar" class="fixed top-0 w-full bg-white shadow-md transition-transform z-50">
+  <header id="navbar" class="fixed top-0 w-full bg-gradient-to-r from-purple-100 via-white to-white">
     <nav class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-      <div class="font-bold text-lg">Dravit</div>
-      <ul class="flex space-x-4 text-sm">
-        <li><a href="/dravit-portfolio/" class="hover:text-indigo-600">Home</a></li>
-        <li><a href="/dravit-portfolio/about/" class="hover:text-indigo-600">About</a></li>
-        <li><a href="/dravit-portfolio/projects/" class="hover:text-indigo-600">Projects</a></li>
-        <li><a href="/dravit-portfolio/articles/" class="hover:text-indigo-600">Articles</a></li>
-        <li><a href="/dravit-portfolio/contact/" class="hover:text-indigo-600">Contact</a></li>
+      <div class="text-xl font-extrabold tracking-tight gray-900">  <a href="/dravit-portfolio/" class="brand-link">Dravit</a></div>
+      <ul class="flex space-x-6 text-sm font-medium">
+        <li><a href="/dravit-portfolio/" class="">Home</a></li>
+        <li><a href="/dravit-portfolio/about/" class="">About</a></li>
+        <li><a href="/dravit-portfolio/projects/" class="">Projects</a></li>
+        <li><a href="/dravit-portfolio/articles/" class="">Articles</a></li>
+        <li><a href="/dravit-portfolio/contact/" class="">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Main Content -->
-  <main class="flex-grow pt-20 px-4 max-w-3xl mx-auto">
+  <main class="flex-grow pt-20 px-4  bg-gradient-to-r from-purple-100 via-white to-white">
+    <section class="max-w-3xl mx-auto">
     <h1 class="text-3xl font-bold mb-6">Articles & Blog Posts</h1>
     <ul class="space-y-6">
       <li class="border-b pb-4">
@@ -42,15 +43,33 @@
         <a href="#" class="text-indigo-600 hover:underline text-sm">Read More</a>
       </li>
     </ul>
+    </section>
   </main>
 
   <!-- Footer -->
-  <footer class="bg-gray-100 py-6 text-center text-gray-500 text-sm">
-    <a href="https://codebydravit.github.io/dravit-portfolio/" class="hover:text-indigo-600">Dravit</a>
-    &copy; 2025 
-  </footer>
 
+    <footer class="bg-gray-900 text-gray-200 text-sm px-6 py-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <!-- Left side nav links -->
+        <div class="flex space-x-6">
+        <a href="/dravit-portfolio/" class="hover:underline">Home</a>
+        <a href="/dravit-portfolio/projects/" class="hover:underline">Projects</a>
+        <a href="/dravit-portfolio/articles/" class="hover:underline">Blog</a>
+        <a href="/dravit-portfolio/contact/" class=" hover:underline ">Contact</a>
+        </div>
+        <span><a href="https://codebydravit.github.io/dravit-portfolio/" class="font-semibold transform transition duration-200 hover:scale-110">Dravit</a> &copy; 2025 </span>
 
+        <!-- Right side GitHub icon -->
+        <div>
+        <a href="https://github.com/codebydravit" target="_blank" rel="noopener noreferrer" >
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+            <path d="M12 0C5.37 0 0 5.373 0 12c0 5.302 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.166c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.84 1.238 1.84 1.238 1.07 1.834 2.807 1.304 3.492.996.108-.776.418-1.305.762-1.605-2.665-.304-5.466-1.336-5.466-5.93 0-1.31.467-2.382 1.235-3.22-.123-.304-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23a11.49 11.49 0 013.003-.403c1.018.005 2.042.138 3.003.403 2.29-1.552 3.296-1.23 3.296-1.23.653 1.653.24 2.872.118 3.176.77.838 1.233 1.91 1.233 3.22 0 4.61-2.803 5.624-5.475 5.922.43.372.823 1.102.823 2.222v3.293c0 .322.218.694.825.576C20.565 21.796 24 17.298 24 12c0-6.627-5.373-12-12-12z"/>
+            </svg>
+        </a>
+        </div>
+    </div>
+    </footer>
+  <!-- Scroll Behavior Script -->
   <!-- Scroll Behavior Script -->
   <script>
     let lastScrollTop = 0;
@@ -62,5 +81,29 @@
       lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
     });
   </script>
+ <!-- header color hover  -->
+<script>
+  const links = document.querySelectorAll('nav a'); // only nav links
+  const path = window.location.pathname;
+
+  links.forEach(link => {
+    // Skip links that should not be styled (like the brand/logo link)
+    if (link.classList.contains('brand-link')) return;
+
+    const linkPath = new URL(link.href).pathname;
+    if (linkPath === path) {
+      link.classList.add(
+        'bg-yellow-400',
+        'text-black',
+        'px-3',
+        'py-1',
+        'rounded-md',
+        'font-semibold',
+        'hover:bg-gray-200'
+      );
+    }
+  });
+</script>
+
 </body>
 </html>

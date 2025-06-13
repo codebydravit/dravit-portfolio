@@ -16,44 +16,45 @@
 <body class="flex flex-col min-h-screen bg-white text-gray-900">
 
   <!-- Header -->
-  <header id="navbar" class="fixed top-0 w-full bg-white shadow z-50">
+  <header id="navbar" class="fixed top-0 w-full bg-gradient-to-r from-purple-100 via-white to-white">
     <nav class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-      <div class="text-xl font-extrabold tracking-tight gray-900">
+      <div class="font-bold font-serif py-2 text-2xl">
   <a href="/dravit-portfolio/" class="brand-link">Dravit</a>
 </div>
       <ul class="flex space-x-6 text-sm font-medium">
-        <li><a href="/dravit-portfolio/" class="">Home</a></li>
-        <li><a href="/dravit-portfolio/about/" class="">About</a></li>
-        <li><a href="/dravit-portfolio/projects/" class="hover:text-yellow-400">Projects</a></li>
-        <li><a href="/dravit-portfolio/articles/" class="hover:text-yellow-400">Articles</a></li>
-        <li><a href="/dravit-portfolio/contact/" >Contact</a></li>
+        <li><a href="/dravit-portfolio/" class="text-[#111827] bg-[#EAB308] px-4 py-2 rounded-md font-medium">Home</a></li>
+        <li><a href="/dravit-portfolio/about/" class="text-[#111827] bg-[#EAB308] px-4 py-2 rounded-md font-medium">About</a></li>
+        <li><a href="/dravit-portfolio/projects/" class="text-[#111827] bg-[#EAB308] px-4 py-2 rounded-md font-medium">Projects</a></li>
+        <li><a href="/dravit-portfolio/articles/" class="text-[#111827] bg-[#EAB308] px-4 py-2 rounded-md font-medium">Articles</a></li>
+        <li><a href="/dravit-portfolio/contact/" class="text-[#111827] bg-[#EAB308] px-4 py-2 rounded-md font-medium">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <main class="flex-grow pt-32 pb-16 px-4 max-w-5xl mx-auto text-center">
+  <!-- Hero Section why px-4 max-w-5xl mx-auto -->
+  <main class="flex-grow pt-32 pb-16  text-center bg-gradient-to-r from-purple-100 via-white to-white">
     <section class="flex flex-col items-center sm:flex-row sm:items-center sm:justify-center gap-8">
       <!-- Profile Image -->
  <img src="/dravit-portfolio/assets/profile.jfif" alt="Dravit Profile"
   class="w-40 h-40 rounded-full border-4 border-gray-600 shadow-md object-cover 
          transition-all duration-300 hover: hover:scale-105" />
-         
+         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
       <!-- Intro -->
       <div class="max-w-xl text-left">
-        <h1 class="text-4xl font-bold text-gray-900 mb-2">Hey, I'm Dravit </h1>
-        <h2 class="text-xl text-gray-900 font-semibold mb-4">AI Developer & Full-stack Engineer</h2>
-        <p class="text-base text-gray-700 leading-relaxed">
+        <h1 class="text-4xl font-bold text-black mb-2">Hey, I'm Dravit </h1>
+        <h2 class="text-[20px] text-black  font-semibold mb-4">AI Developer & Full-stack Engineer</h2>
+        <p class="text-[20px] text-black font-normal leading-relaxed">
           I craft intelligent tools, chatbots, and full-stack solutions that solve real-world problems. 
           Passionate about building impactful AI products with clean code & smart logic.
         </p>
         <div class="mt-6 flex flex-wrap gap-4">
         <!-- Yellow Button -->
-<a href="/dravit-portfolio/projects/"
-   class="bg-yellow-400 text-black px-6 py-2 rounded-full text-sm font-semibold 
-           transform hover:scale-105">
-  Explore Projects
-</a>
+        <a href="/dravit-portfolio/projects/"
+        class="bg-yellow-400 text-black px-6 py-2 rounded-full text-sm font-semibold 
+                transform hover:scale-105">
+        Explore Projects
+        </a>
 
         <!-- Yellow Outline Button -->
         <a href="/dravit-portfolio/assets/Dravit_Resume.pdf" download
@@ -66,18 +67,15 @@
     </section>
 
     <!-- Uses section -->
-    <div class="mt-10 text-sm text-gray-600">
+    <div class="mt-10 text-sm text-black">
       Tools I rely on? Check out my 
       <a href="/dravit-portfolio/uses/" class="text-indigo-600 hover:underline font-medium">uses page</a>.
     </div>
   </main>
 
   <!-- Footer -->
-  <!-- <footer class="bg-gray-100 py-6 text-center text-gray-500 text-sm mt-auto">
-    <a href="https://codebydravit.github.io/dravit-portfolio/" class="hover:text-indigo-600 font-semibold">Dravit</a> &copy; 2025
-  </footer> -->
-<!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 text-sm px-6 py-4">
+
+    <footer class="bg-gray-900 text-gray-200 text-sm px-6 py-4">
     <div class="max-w-7xl mx-auto flex justify-between items-center">
         <!-- Left side nav links -->
         <div class="flex space-x-6">
@@ -99,21 +97,18 @@
     </div>
     </footer>
   <!-- Scroll Behavior Script -->
+  <!-- Scroll Behavior Script -->
   <script>
-    let lastScroll = 0;
+    let lastScrollTop = 0;
     const navbar = document.getElementById("navbar");
 
     window.addEventListener("scroll", () => {
-      const currentScroll = window.pageYOffset;
-      if (currentScroll > lastScroll) {
-        navbar.style.transform = "translateY(-100%)";
-      } else {
-        navbar.style.transform = "translateY(0)";
-      }
-      lastScroll = currentScroll <= 0 ? 0 : currentScroll;
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      navbar.style.transform = currentScroll > lastScrollTop ? "translateY(-100%)" : "translateY(0)";
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
     });
   </script>
-
+ <!-- header color hover  -->
 <script>
   const links = document.querySelectorAll('nav a'); // only nav links
   const path = window.location.pathname;

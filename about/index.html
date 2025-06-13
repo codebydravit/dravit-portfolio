@@ -65,49 +65,93 @@
     <!-- Skills -->
     <section class="mt-10 px-4">
       <h2 class="text-xl font-semibold text-indigo-700 mb-4">Technical Skills</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-sm text-gray-800">
-        <div>
-          <h3 class="font-semibold mb-2 text-gray-600">Frontend</h3>
-          <ul class="space-y-1">
-            <li>ReactJs</li>
-            <li>NextJs</li>
-            <li>Svelte</li>
-            <li>Astro</li>
-            <li>React Query</li>
-            <li>SWR</li>
-            <li>Zustand</li>
-            <li>Redux</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="font-semibold mb-2 text-gray-600">Backend</h3>
-          <ul class="space-y-1">
-            <li>Node.js</li>
-            <li>Express.js</li>
-            <li>Fastify</li>
-            <li>REST & GraphQL APIs</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="font-semibold mb-2 text-gray-600">DevOps</h3>
-          <ul class="space-y-1">
-            <li>Docker</li>
-            <li>Git & GitHub</li>
-            <li>CI/CD (GitHub Actions)</li>
-            <li>Netlify / Vercel / Firebase</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="font-semibold mb-2 text-gray-600">Data Science & AI/ML</h3>
-          <ul class="space-y-1">
-            <li>Python, NumPy, Pandas</li>
-            <li>Scikit-learn, XGBoost</li>
-            <li>OpenAI, Hugging Face</li>
-            <li>LangChain, Pinecone</li>
-            <li>RAG pipelines</li>
-          </ul>
-        </div>
-      </div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-sm text-gray-800">
+  <!-- Repeat this block for each section -->
+  <div>
+    <h3 onclick="toggleList(this)" class="cursor-pointer font-semibold mb-2 text-gray-600">Programming Languages</h3>
+    <ul class="space-y-1 hidden transition-all duration-300">
+      <li>Python</li>
+      <li>JavaScript</li>
+    </ul>
+  </div>
+
+  <div>
+    <h3 onclick="toggleList(this)" class="cursor-pointer font-semibold mb-2 text-gray-600">Frontend</h3>
+    <ul class="space-y-1 hidden transition-all duration-300">
+      <li>React.js</li>
+      <li>HTML, CSS</li>
+    </ul>
+  </div>
+
+  <div>
+    <h3 onclick="toggleList(this)" class="cursor-pointer font-semibold mb-2 text-gray-600">Backend</h3>
+    <ul class="space-y-1 hidden transition-all duration-300">
+      <li>FastAPI</li>
+      <li>Node.js</li>
+      <li>REST APIs</li>
+    </ul>
+  </div>
+
+  <div>
+    <h3 onclick="toggleList(this)" class="cursor-pointer font-semibold mb-2 text-gray-600">Databases</h3>
+    <ul class="space-y-1 hidden transition-all duration-300">
+      <li>MS SQL</li>
+    </ul>
+  </div>
+
+  <div>
+    <h3 onclick="toggleList(this)" class="cursor-pointer font-semibold mb-2 text-gray-600">Version Control</h3>
+    <ul class="space-y-1 hidden transition-all duration-300">
+      <li>Git</li>
+      <li>GitHub</li>
+    </ul>
+  </div>
+
+  <div>
+    <h3 onclick="toggleList(this)" class="cursor-pointer font-semibold mb-2 text-gray-600">Testing Tools</h3>
+    <ul class="space-y-1 hidden transition-all duration-300">
+      <li>Postman</li>
+      <li>Swagger UI</li>
+    </ul>
+  </div>
+
+  <div>
+    <h3 onclick="toggleList(this)" class="cursor-pointer font-semibold mb-2 text-gray-600">Frameworks & Styling</h3>
+    <ul class="space-y-1 hidden transition-all duration-300">
+      <li>Tailwind CSS</li>
+      <li>Material UI (MUI)</li>
+    </ul>
+  </div>
+
+  <div>
+    <h3 onclick="toggleList(this)" class="cursor-pointer font-semibold mb-2 text-gray-600">Generative AI & RAG</h3>
+    <ul class="space-y-1 hidden transition-all duration-300">
+      <li>OpenAI, LLaMA, Groq</li>
+      <li>Voice Models, Ollama</li>
+      <li>Sentence Transformers</li>
+      <li>RAG Pipelines</li>
+      <li>Pinecone, Chroma, FAISS, Qdrant</li>
+    </ul>
+  </div>
+
+  <div>
+    <h3 onclick="toggleList(this)" class="cursor-pointer font-semibold mb-2 text-gray-600">Soft Skills</h3>
+    <ul class="space-y-1 hidden transition-all duration-300">
+      <li>Teamwork</li>
+      <li>Problem-Solving</li>
+      <li>Time Management</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  function toggleList(element) {
+    const ul = element.nextElementSibling;
+    ul.classList.toggle('hidden');
+  }
+</script>
+
+
     </section>
        </section>
   </main>

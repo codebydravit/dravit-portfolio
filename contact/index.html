@@ -26,7 +26,7 @@
   <main class="flex-grow pt-24 px-4 bg-gradient-to-r from-purple-100 via-white to-white">
     <section class="max-w-6xl mx-auto">
     <h1 class="text-3xl font-bold mb-6">Contact Me</h1>
-    <p class="mb-4 text-gray-600">Feel free to reach out for collaborations, freelance work, or just to say hi 👋</p>
+    <p class="mb-4 text-gray-600">Have a project in mind or freelance work, or just to say hi 👋</p>
 <div class="grid md:grid-cols-2 gap-12 items-center">
   <!-- Left Side Image -->
   <div class="flex justify-center md:justify-end md:pr-6 ">
@@ -42,10 +42,10 @@
     </div>
 
     <!-- Phone -->
-    <p class="text-2xl font-bold">+91 98765 43210</p>
+    <p class="text-2xl font-bold">+91 73055 97392</p>
     <div class="flex space-x-4">
-      <a href="tel:+919876543210" class="bg-blue-600 text-white px-6 py-2 rounded shadow hover:bg-blue-700 transition">Call</a>
-      <a href="https://wa.me/919876543210" target="_blank" class="bg-green-600 text-white px-6 py-2 rounded shadow hover:bg-green-700 transition">Whatsapp</a>
+      <a href="tel:+917305597392" class="bg-blue-600 text-white px-6 py-2 rounded shadow hover:bg-blue-700 transition">Call</a>
+      <a href="https://wa.me/917305597392" target="_blank" class="bg-green-600 text-white px-6 py-2 rounded shadow hover:bg-green-700 transition">Whatsapp</a>
     </div>
 
 
@@ -53,13 +53,36 @@
 </div>
 <div class="flex flex-col items-center  pt-6 pb-4">
   <img src="/dravit-portfolio/assets/email.svg" alt="email" class="w-20 mb-4" />
-  <p class="text-4xl font-bold text-center">hello@dravit.in</p>
+  <p onclick="openEmailClient()" class="text-4xl font-bold text-center text-black ">
+  hello@dravit.in
+</p>
+
+<script>
+  function openEmailClient() {
+    const email = "hello@dravit.in";
+    const subject = encodeURIComponent("Contact via Portfolio");
+    const body = encodeURIComponent("Hi Dravit,\n\n");
+
+    if (email.includes("@gmail.com")) {
+      window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`, "_blank");
+    } else if (
+      email.includes("@outlook.com") ||
+      email.includes("@hotmail.com") ||
+      email.includes("@live.com")
+    ) {
+      window.open(`https://outlook.live.com/owa/?path=/mail/action/compose&to=${email}&subject=${subject}&body=${body}`, "_blank");
+    } else {
+      window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+    }
+  }
+</script>
+
 </div>
 
 
   
     <!-- Optional contact form placeholder -->
-     <p class="pt-4 pb-4 text-4xl font-semibold text-black ">Have a project in mind or just want to say hi? Fill out the form below — I’ll get back to you soon!</p>
+     <p class="pt-4 pb-4 text-4xl font-semibold text-black ">Fill out the form below — I’ll get back to you soon!</p>
     <form id="contactForm" class="  mb-12 space-y-4">
       <input type="text" id="name" placeholder="Your Name" class="w-full border rounded p-2" required>
       <input type="email" id="email" placeholder="Your Email" class="w-full border rounded p-2" required>
